@@ -77,13 +77,11 @@ class DATA_LOADER(object):
         # self.vgse_feature /= self.vgse_feature.pow(2).sum(1).sqrt().unsqueeze(1).expand(self.vgse_feature.size(0),self.vgse_feature.size(1)) #[200,469]
         #print("ok")
         if opt.dataset == 'CUB':
-            self.update_att1 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_CUB_1024_size_448_seed_0.mat')['att']).float()
-            self.update_att2 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_CUB_1024_size_448_seed_250.mat')['att']).float()
-            self.update_att3 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_CUB_1024_size_448_seed_1000.mat')['att']).float()
-            self.attribute = (self.update_att1+self.update_att3)/2.0
-        # self.update_att1 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_cub_1024_seed_0.mat')['att']).float()
-        # self.update_att2 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_cub_1024_seed_250.mat')['att']).float()
-        # self.update_att3 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_cub_1024_seed_1000.mat')['att']).float()
+     
+            self.update_att1 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_cub_1024_seed_0.mat')['att']).float()
+            self.update_att2 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_cub_1024_seed_250.mat')['att']).float()
+            self.update_att3 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/CUB/att_cub_1024_seed_1000.mat')['att']).float()
+            self.attribute = (self.update_att1+self.update_att2+self.update_att3)/3.0
         if opt.dataset == 'SUN':
             self.update_att1 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/SUN/att_SUN_seed_0.mat')['att']).float()
             self.update_att2 = torch.from_numpy(sio.loadmat('/home/hwj/CVPR_CODE/data/SUN/att_SUN_seed_250.mat')['att']).float()
@@ -97,23 +95,6 @@ class DATA_LOADER(object):
        
         self.attribute /= self.attribute.pow(2).sum(1).sqrt().unsqueeze(1).expand(self.attribute.size(0),self.attribute.size(1))
         self.update_att = (self.update_att1+self.update_att3)/2.0
-        #self.attribute = 0.5*self.attribute+0.5*self.update_att
-        #self.attribute = self.update_att3
-
-        #cos = torch.cosine_similarity(self.attribute1,self.attribute,dim=0,eps=1e-08)
-        #cos = torch.mm(self.attribute,self.attribute1.T)
-        #cos  = cosine_similarity(np.array(self.attribute1),np.array(self.attribute))
-       # import numpy as np
-        
-        #x = np.random.rand(100).reshape(10,10)
-        # x = plt.imshow(cos[0:10,0:10], cmap=plt.cm.hot, vmin=0, vmax=1)
-        # plt.colorbar()
-        # plt.savefig('./update_att_att.png')
-        # plt.show()
-
-
-        # print(cos)
-
 
 
         if not opt.validation:
