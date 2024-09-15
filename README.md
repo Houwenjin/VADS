@@ -10,7 +10,7 @@ The code implementation of **VADS** mainly based on [PyTorch](https://pytorch.or
 
 ## Preparing Dataset and Model
 
-We provide pre-trained models ([Google Drive]([https://drive.google.com/drive/folders/130_RgZndLkLpoP1yqf7CpWbzaO_26XL0?usp=sharing](https://drive.google.com/drive/folders/1D5C8An6JZY24SyCMb7vQk36egdauJVPE?usp=drive_link))) on CUB dataset. You can download model files as well as corresponding datasets, and organize them as follows: 
+We provide pre-trained models ([Google Drive](https://drive.google.com/drive/folders/1D5C8An6JZY24SyCMb7vQk36egdauJVPE?usp=drive_link)) on CUB dataset. You can download model files as well as corresponding datasets, and organize them as follows: 
 ```
 .
 ├── data
