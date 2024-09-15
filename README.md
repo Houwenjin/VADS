@@ -38,11 +38,11 @@ $ python train_CUB.py
 If you find VADS is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
 
 ```bibtex
-@inproceedings{chen2024progressive,
-  title={Progressive Semantic-Guided Vision Transformer for Zero-Shot Learning},
-  author={Chen, Shiming and Hou, Wenjin and Khan, Salman and Khan, Fahad Shahbaz},
+@inproceedings{hou2024visual,
+  title={Visual-Augmented Dynamic Semantic Prototype for Generative Zero-Shot Learning},
+  author={Hou, Wenjin and Chen, Shiming and Chen, Shuhuang and Hong, Ziming and Wang, Yan and Feng, Xuetao and Khan, Salman and Khan, Fahad Shahbaz and You, Xinge},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={23964--23974},
+  pages={23627--23637},
   year={2024}
 }
 ```
