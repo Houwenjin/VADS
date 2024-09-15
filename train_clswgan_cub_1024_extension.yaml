@@ -1,0 +1,136 @@
+dataset:
+  value: CUB
+dataroot:
+  value: data
+image_embedding:
+  value: res101
+class_embedding:
+  value: sent
+syn_num:
+  value: 500
+  #value: 500
+gzsl:
+  value: True
+preprocessing:
+  value: True 
+standardization:
+  value: False
+workers:
+  value: 64
+batch_size:
+  value: 64
+resSize:
+  value: 2048
+attSize:
+  value: 1024
+nz:
+  value: 1024
+ngh:
+  value: 4096
+ndh: 
+  value: 4096
+nepoch:
+  value: 300
+cls_nepoch: 
+  value: 2000
+critic_iter:
+  value: 3
+  #value: 5
+  #value: 1
+lambda1: 
+  value: 10.
+lambda2:
+  value: 10.
+lr:
+  value: 0.0001
+  #value: 0.01
+feed_lr:
+  value: 0.00001
+  #value: 0.0001
+dec_lr:
+  value: 0.0001
+  #value: 0.001
+classifier_lr:
+  value: 0.001
+beta1:
+  value: 0.5
+cuda:
+  value: True
+encoded_noise:
+  value: True
+manualSeed:
+  value: 8888
+nclass_all:
+  value: 200
+validation:
+  value: False
+gammaD:
+  value: 10
+gammaG:
+  value: 10
+gammaG_D2:
+  value: 1000
+gammaD2:
+  value: 1000
+latent_size:
+  value: 1024
+conditional:
+  value: True
+a1:
+  value: 1
+a2:
+  value: 1
+recons_weight:
+  value: 0.1
+feedback_loop:
+  value: 2
+freeze_dec:
+  value: True
+result_root:
+  value: ./
+center_margin:
+  value: 200
+center_weight:
+  value: 0.5
+incenter_weight:
+  value: 0.8
+cls_weight:
+  value: 0.2
+nclass_seen:
+  value: 150
+latensize:
+  value: 2048
+i_c:
+  value: 0.1
+lr_dec:
+  value: False
+lr_dec_ep:
+  value: 1
+final_classifier:
+  value: softmax
+k_nn:
+  value: 5
+dim:
+  value: 1024
+visdim:
+  value: 2048
+refine_coef:
+  value: 0.1
+loss_simi:
+  value: 0.67
+encoder_layer_sizes:
+  value: [2048,4096]
+decoder_layer_sizes:
+  value: [4096,2048]
+size:
+  value: 224
+pretrain_classifier:
+  value: ''
+embedSize:
+  value: 2048
+Vis_con:
+  value: 0.1
+Sem_con:
+  value: 0.1
+loss_fn:
+  value: 0.01
